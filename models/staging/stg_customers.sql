@@ -18,4 +18,4 @@ WITH
 SELECT
     *
 FROM
-    renamed;
+    renamed

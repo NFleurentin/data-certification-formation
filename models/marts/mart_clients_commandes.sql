@@ -23,4 +23,4 @@ FROM
 GROUP BY
     c.client_id,
     c.prenom,
-    c.nom;
+    c.nom
