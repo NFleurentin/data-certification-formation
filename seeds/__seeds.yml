@@ -1,0 +1,15 @@
+version: 2
+
+seeds:
+  - name: statuts_commande
+    description: "Liste des statuts possibles pour les commandes"
+    columns:
+      - name: statut
+        description: "Code du statut de la commande"
+        data_tests:
+          - not_null
+          - unique
+      - name: est_paye
+        description: "Indique si la commande est payée"
+        data_tests:
+          - not_null
