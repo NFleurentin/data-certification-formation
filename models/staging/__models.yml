@@ -35,6 +35,7 @@ models:
       - name: statut
         description: "Statut de la commande"
         data_tests:
-          - accepted_values:
+          - relationships:
               arguments:
-                values: ["completed", "pending"]
+                to: ref('statuts_commande')
+                field: statut
