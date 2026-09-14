@@ -11,7 +11,8 @@ WITH
             customer_id AS client_id,
             amount AS montant,
             status AS statut,
-            order_date AS date_commande
+            order_date AS date_commande,
+            _loaded_at
         FROM
             source
     )
