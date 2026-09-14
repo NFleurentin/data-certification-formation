@@ -5,22 +5,27 @@ models:
     description: "Staging table for customers"
     columns:
       - name: client_id
+        description: "Identifiant unique du client"
         data_tests:
           - not_null
           - unique
       - name: email
+        description: "Email du client, en minuscules"
         data_tests:
           - not_null:
               config:
                 severity: warn
                 store_failures: true
+
   - name: stg_orders
     columns:
       - name: commande_id
+        description: "Identifiant unique de la commande"
         data_tests:
           - not_null
           - unique
       - name: client_id
+        description: "Identifiant du client ayant passé la commande"
         data_tests:
           - not_null
           - relationships:
@@ -28,6 +33,7 @@ models:
                 to: ref('stg_customers')
                 field: client_id
       - name: statut
+        description: "Statut de la commande"
         data_tests:
           - accepted_values:
               arguments:
