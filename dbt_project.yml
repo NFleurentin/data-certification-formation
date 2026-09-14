@@ -12,7 +12,11 @@ clean-targets:
 seeds:
   # Builds seeds into '<your_schema_name>_raw'
   data_certification_formation:
-    +schema: raw
+    status_commande:
+      +column_types:
+        statut: varchar
+        libelle: varchar
+        est_paye: boolean
 
 models:
   data_certification_formation:
