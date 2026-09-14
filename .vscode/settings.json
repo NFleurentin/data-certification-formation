@@ -1,0 +1,12 @@
+{
+    "editor.formatOnSave": false,
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "models/.*\\.sql$",
+                "cmd": "dbt format -s ${fileBasenameNoExt} --project-dir ${workspaceFolder} && dbt lint -s ${fileBasenameNoExt} --project-dir ${workspaceFolder} --fix",
+                "isAsync": false
+            }
+        ]
+    }
+}
