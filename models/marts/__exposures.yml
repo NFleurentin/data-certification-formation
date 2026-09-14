@@ -1,0 +1,12 @@
+version: 2
+
+exposures:
+  - name: dashboard_superset_commandes
+    type: dashboard
+    maturity: high
+    description: "Suivi des clients et de leurs commandes, consommé par l'équipe CRM."
+    depends_on:
+      - ref('mart_clients_commandes')
+    owner:
+      name: "Equipe BI"
+      email: "bi@example.com"
